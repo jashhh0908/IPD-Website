@@ -22,7 +22,8 @@ export default function Sidebar() {
         return [
           { to: ROUTES.police.DASHBOARD, label: 'Overview', icon: '◩' },
           { to: ROUTES.police.REPORTS, label: 'Incident Reports', icon: '⚑' },
-          { to: ROUTES.police.ANALYTICS, label: 'Analytics', icon: '📈' }
+          { to: ROUTES.police.ANALYTICS, label: 'Analytics', icon: '📈' },
+          { to: ROUTES.police.MAP, label: 'Live Map', icon: '🗺️' }
         ];
       case 'insurance':
         return [

@@ -10,7 +10,8 @@ export const ROUTES = {
     REPORTS: '/police/reports',
     REPORT_DETAIL: (id) => `/police/reports/${id}`,
     REPORT_DETAIL_PATH: '/police/reports/:id',
-    ANALYTICS: '/police/analytics'
+    ANALYTICS: '/police/analytics',
+    MAP: '/police/map'
   },
   [ROLES.INSURANCE]: {
     DASHBOARD: '/insurance',

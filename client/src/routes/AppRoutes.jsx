@@ -5,6 +5,7 @@ import RoleRoute from './RoleRoute';
 import { ROLES } from '../constants/roles';
 import { ROUTES } from '../constants/routes';
 import Spinner from '../components/common/Spinner';
+import useAuth from '../hooks/useAuth';
 
 // Lazy loading page components
 const LoginPage = lazy(() => import('../pages/auth/LoginPage'));
@@ -14,6 +15,7 @@ const PoliceDashboard = lazy(() => import('../pages/police/PoliceDashboard'));
 const PoliceReports = lazy(() => import('../pages/police/PoliceReports'));
 const PoliceReportDetail = lazy(() => import('../pages/police/PoliceReportDetail'));
 const PoliceAnalytics = lazy(() => import('../pages/police/PoliceAnalytics'));
+const PoliceMap = lazy(() => import('../pages/police/PoliceMap'));
 
 // Insurance pages
 const InsuranceDashboard = lazy(() => import('../pages/insurance/InsuranceDashboard'));
@@ -58,6 +60,7 @@ export default function AppRoutes() {
               <Route path={ROUTES[ROLES.POLICE].REPORTS} element={<Suspense fallback={<PageSpinner />}><PoliceReports /></Suspense>} />
               <Route path={ROUTES[ROLES.POLICE].REPORT_DETAIL_PATH} element={<Suspense fallback={<PageSpinner />}><PoliceReportDetail /></Suspense>} />
               <Route path={ROUTES[ROLES.POLICE].ANALYTICS} element={<Suspense fallback={<PageSpinner />}><PoliceAnalytics /></Suspense>} />
+              <Route path={ROUTES[ROLES.POLICE].MAP} element={<Suspense fallback={<PageSpinner />}><PoliceMap /></Suspense>} />
             </Route>
 
             {/* Insurance routes */}

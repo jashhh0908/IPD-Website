@@ -52,3 +52,14 @@ export const createAccident = async (req, res) => {
         return res.status(500).json({ error: 'Internal Server Error' });
     }
 };
+
+export const getAccidents = async (req, res) => {
+    try {
+        const accidents = await Accident.find().sort({ date: -1 });
+        return res.status(200).json(accidents);
+    } catch (error) {
+        console.error(`Error in getAccidents controller: ${error.message}`);
+        return res.status(500).json({ error: 'Internal Server Error' });
+    }
+};
+
