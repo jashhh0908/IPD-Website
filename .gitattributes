@@ -1,0 +1,18 @@
+# Enforce auto line ending normalization for all text files (converts CRLF to LF in git index)
+* text=auto
+
+# Explicitly declare files that should always use LF (like scripts)
+*.js text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+
+# Denote binary files to prevent git from attempting line-ending conversions on them
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
