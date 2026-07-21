@@ -9,7 +9,12 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Bypass-Tunnel-Reminder', 'bypass-tunnel-reminder']
+}));
 app.use(express.json());
 
 app.use('/api/accidents', accidentRoutes);
